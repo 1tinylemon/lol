@@ -30,7 +30,15 @@ function clearCanvas(){
 }
 function notClear(){
     drawSquare("lime",50,250,50,xstart,platy);
+    drawLine(0,0,200,200)
 }
+function drawLine(intialX, initialY, finalX, finalY ){
+    context.beginPath();
+    context.moveTo(intialX, initialY);
+    context.lineTo(finalX, finalY);
+    context.stroke();
+}
+
 
 
 
@@ -54,11 +62,12 @@ var playery = getRandomInt(1, screenh);
 var platy = screenh/1.5;
 let xstart = playerx;
 
-let lol = 1 //xd? (used for infinte while)
+let lol = 1 //(used for infinte while)
 
 
 drawSquare("black",5,50,50,playerx,playery,false);
 drawSquare("lime",50,250,50,xstart,platy,false);
+
 
 
 
